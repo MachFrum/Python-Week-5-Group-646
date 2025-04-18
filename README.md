@@ -1,64 +1,56 @@
-# 🐶 Python OOP Challenge: Build Your Own Digital Pet
+# 🐾 Virtual Pet Simulator
 
-Welcome to this week's Python challenge! 🎉
+A Python-based interactive virtual pet experience using Object-Oriented Programming (OOP) principles.
 
-In this challenge, you’ll be creating a virtual pet using Object-Oriented Programming concepts in Python. This fun project will help you practice how to use classes, attributes, methods, and constructors.
+## 🎮 Features
+- **Core Interactions**
+  - 🍖 Feed your pet to reduce hunger
+  - 💤 Put pet to sleep for energy recovery
+  - 🎮 Play to increase happiness
+  - 🎓 Teach custom tricks
+- **Dynamic Status System**
+  - Real-time hunger/energy/happiness tracking (0-10 scale)
+  - Automatic status degradation/improvement
+  - Visual star-based status display
+- **Robust CLI Interface**
+  - Natural language commands
+  - Input validation and error handling
+  - Contextual help system
 
----
+## ⚙️ Installation
+1. **Prerequisites**: Python 3.6+
+2. Clone repository:
+3. Run the simulator:
+   ```bash
+   python pet.py
+   ```
 
-## 🧠 Objective
+## 🖥️ Usage
+```plaintext
+> Name your pet: Buddy
 
-Create a class called `Pet` with the following:
+Type 'help' for command list
 
-### Attributes:
-- `name`: the name of your pet
-- `hunger`: an integer representing hunger level (0 = full, 10 = very hungry)
-- `energy`: an integer representing energy level (0 = tired, 10 = fully rested)
-- `happiness`: an integer (0–10)
+What would you like to do? feed
+Buddy chomps down some kibble!
 
-### Methods:
-- `eat()`: reduces hunger by 3 points (but not below 0), and increases happiness by 1.
-- `sleep()`: increases energy by 5 points (but not above 10).
-- `play()`: decreases energy by 2, increases happiness by 2, and increases hunger by 1.
-- `get_status()`: prints the current state of the pet.
+BUDDY STATUS:
+🍖 Hunger: ★★☆☆☆☆☆☆☆☆
+⚡ Energy: ★★★★★★☆☆☆☆
+😊 Happiness: ★★★★★★★☆☆☆
 
-### Bonus 🎯
-- Add a method `train(trick)` that teaches your pet a new trick and stores it in a list.
-- Add a method `show_tricks()` that prints all learned tricks.
+What would you like to do? teach roll over
+Buddy learns ROLL OVER!
+```
 
----
-
-## 📝 How to Complete
-
-1. Fork or clone this repo.
-2. Write your `Pet` class in `pet.py`.
-3. In `main.py`, create a pet object and call its methods to test functionality.
-4. Submit a GitHub repo or a zipped folder with your code and a screenshot of the output.
-
----
-
-## ✅ Sample Output
-
-```bash
-Creating pet: Max
-Max is eating...
-Max is playing...
-Max is sleeping...
-Max's current status:
-Hunger: 2
-Energy: 8
-Happiness: 9
-Tricks: ['roll over', 'play dead']
-
-
-### 💡 Tips
-Use max() and min() to keep values between 0 and 10.
-
-Think about edge cases like trying to play when energy is 0.
-
-🏁 Submission
-Deadline: [Set your date]
-
-Submission format: clone / fork this repo
-
-Bonus points for creativity (custom actions, emojis, pet types, etc.)
+**Available Commands**:
+```
+help        Show command list
+feed        Give food to pet
+sleep       Restore pet's energy
+play        Engage in playtime
+status      Show current stats
+teach [trick]  Train new trick
+tricks      List learned tricks
+quit        Exit program
+```
